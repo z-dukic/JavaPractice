@@ -5,6 +5,23 @@ public class Osoba {
 	private int sifra;
 	private String ime;
 	private String prezime;
+	
+	//Generiranje punih konstruktora
+	//Prima sva svojstva koja klasa posjeduje
+	//tzv. puni konstruktor - prima sva svojstva klase
+	public Osoba(int sifra, String ime, String prezime) {
+		this.sifra = sifra;
+		this.ime = ime;
+		this.prezime = prezime;
+	}
+	
+	public Osoba() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+	
 
 	public int getSifra() {
 		return sifra;
@@ -35,5 +52,14 @@ public class Osoba {
 		
 		return this.ime + " " + this.prezime;
 	}
+	
+	public String predstaviSe() {
+		return "g. " + this.prezime;
+	}
+
+
+
+	
+	
 
 }
