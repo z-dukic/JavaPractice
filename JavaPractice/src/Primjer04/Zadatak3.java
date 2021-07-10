@@ -7,8 +7,7 @@ public class Zadatak3 {
 
 	}
 
-	private static int countOccurences(
-			  String someString, char searchedChar, int index) {
+	private static int countOccurences( String someString, char searchedChar, int index) {
 			    if (index >= someString.length()) {
 			        return 0;
 			    }
