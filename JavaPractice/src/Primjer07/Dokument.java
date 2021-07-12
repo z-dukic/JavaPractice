@@ -41,5 +41,11 @@ public class Dokument {
 		this.iznos = iznos;
 		this.datum = datum;
 	}
+	
+	@Override
+	public String toString() {
+		
+		return this.datum + " " + this.id + " " + this.iznos;
+	}
 
 }
