@@ -17,7 +17,7 @@ public class Program {
 	}
 
 	private void ispisiMobitele() {
-		for (Mobitel m : mobiteli) { //za svaki (foreach) mobitel m u mobiteli, ispiši 
+		for (Mobitel m : mobiteli) { // za svaki (foreach) mobitel m u mobiteli, ispiši
 			System.out.println(m.getNaziv());
 		}
 
