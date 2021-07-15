@@ -72,18 +72,38 @@ public class Ulaz {
 
 		return broj;
 	}
-	
+
 	public static void stanjeKuna(double stanje) {
-		
+
 		System.out.println("Vaše stanje je: " + stanje);
 		System.out.println();
 
-		
-			}
-	
-	public static double uplataKuna(double uplataKuna) {
-		
-	
-		return 0;
+	}
+
+	public static double isplataNovca(double stanje) {
+
+		double iznosIsplate = Double.parseDouble(JOptionPane.showInputDialog("Koliko novaca želite povući?"));
+
+		if (stanje < iznosIsplate) {
+			System.out.println("Nemate dovoljno sredstava za transakciju");
+		} else {
+			stanje = stanje - iznosIsplate;
+			System.out.println("povukli ste: " + iznosIsplate);
+			System.out.println("Trenutacno stanje Vaseg racuna je: " + stanje);
+
+		}
+
+		return stanje - iznosIsplate;
+	}
+
+	public static double uplataNovca(double stanje) {
+
+		double iznosUplate = Double.parseDouble(JOptionPane.showInputDialog("Koliko novaca želite uplatiti?"));
+
+		stanje = stanje + iznosUplate;
+		System.out.println("Na račun ste dodali: " + iznosUplate);
+		System.out.println("Trenutacno stanje Vaseg racuna je: " + stanje);
+
+		return stanje + iznosUplate;
 	}
 }

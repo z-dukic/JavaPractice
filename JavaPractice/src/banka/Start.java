@@ -11,7 +11,6 @@ public class Start {
 	public Start() {
 		banka = new ArrayList<Banka>();
 		glavniIzbornik();
-		
 
 	}
 
@@ -45,26 +44,30 @@ public class Start {
 	private void ucitajAkciju() {
 		switch (Ulaz.ucitajInt("Odaberite akciju: ", "Niste unijeli cijeli broj", 1, 4)) {
 		case 1 -> stanjeRacuna();
-		case 2 -> isplataNovca();
+		case 2 -> povlacenjeNovca();
 		case 3 -> uplataNovaca();
 		case 4 -> System.out.println("Hvala Vam što koristite usluge Erste banke");
-		
 
 		}
 		System.out.println();
 
 	}
 
-	private void krajRada() {
+	private void povlacenjeNovca() {
+		Ulaz.isplataNovca(stanje);
+		
+		drugiIzbornik();
+	}
 
+	private void krajRada() {
+		System.out.println("Hvala Vam što koristite usluge Erste banke");
 	}
 
 	private void uplataNovaca() {
 		
-
-	}
-
-	private void isplataNovca() {
+		Ulaz.uplataNovca(stanje);
+		
+		drugiIzbornik();
 
 	}
 
@@ -73,11 +76,8 @@ public class Start {
 		System.out.println();
 		drugiIzbornik();
 		System.out.println();
-		
+
 	}
-
-
-	
 
 	public static void main(String[] args) {
 		new Start();
