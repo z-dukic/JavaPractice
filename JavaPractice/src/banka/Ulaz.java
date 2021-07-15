@@ -72,5 +72,18 @@ public class Ulaz {
 
 		return broj;
 	}
+	
+	public static void stanjeKuna(double stanje) {
+		
+		System.out.println("Vaše stanje je: " + stanje);
+		System.out.println();
 
+		
+			}
+	
+	public static double uplataKuna(double uplataKuna) {
+		
+	
+		return 0;
+	}
 }

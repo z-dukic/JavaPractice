@@ -6,10 +6,12 @@ import java.util.List;
 public class Start {
 
 	private List<Banka> banka;
+	static double stanje = 1560.00;
 
 	public Start() {
 		banka = new ArrayList<Banka>();
 		glavniIzbornik();
+		
 
 	}
 
@@ -35,24 +37,30 @@ public class Start {
 		System.out.println(" 2. Isplate s računa");
 		System.out.println(" 3. Uplate na račun");
 		System.out.println(" 4. Kraj rada");
+		System.out.println();
 		ucitajAkciju();
+		System.out.println();
 	}
 
 	private void ucitajAkciju() {
-		switch (Ulaz.ucitajInt("Odaberite akciju: ", "Niste unijeli cijelibroj", 1, 4)) {
-		case 1:
-			stanjeRacuna();
-		case 2:
-			isplataNovca();
-		case 3:
-			uplataNovaca();
-		case 4:
-			System.out.println("Hvala Vam što koristite usluge Erste banke");
+		switch (Ulaz.ucitajInt("Odaberite akciju: ", "Niste unijeli cijeli broj", 1, 4)) {
+		case 1 -> stanjeRacuna();
+		case 2 -> isplataNovca();
+		case 3 -> uplataNovaca();
+		case 4 -> System.out.println("Hvala Vam što koristite usluge Erste banke");
+		
+
 		}
+		System.out.println();
+
+	}
+
+	private void krajRada() {
 
 	}
 
 	private void uplataNovaca() {
+		
 
 	}
 
@@ -61,13 +69,15 @@ public class Start {
 	}
 
 	private void stanjeRacuna() {
-		stanjeKuna(1250.37);
+		System.out.println("Vaše stanje je: " + stanje);
+		System.out.println();
+		drugiIzbornik();
+		System.out.println();
+		
 	}
 
-	private static double stanjeKuna(double kune) {
-		return kune = 0;
 
-	}
+	
 
 	public static void main(String[] args) {
 		new Start();
